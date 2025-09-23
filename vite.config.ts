@@ -5,6 +5,7 @@ import { viteMockServe } from 'vite-plugin-mock'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd())
+  
   return {
     plugins: [
     vue(),
@@ -31,6 +32,7 @@ export default defineConfig(({ mode }) => {
     //     rewrite: (path) => path.replace(/^\/api/, '/api')
     //   }
     // }
-  }
+  },
+  base: '/git@github.com:373786306/my-res.git/',
   }
 })
