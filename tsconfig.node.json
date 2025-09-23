@@ -1,0 +1,24 @@
+// tsconfig.node.json
+{
+  "compilerOptions": {
+    "composite": true,           // ✅ 必须！用于 Project References 增量编译
+    "module": "ESNext",          // 与 Vite 一致
+    "moduleResolution": "bundler", // Vite/Rollup 风格模块解析
+    "allowSyntheticDefaultImports": true, // 兼容 CommonJS 导入
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,              // 不生成文件，由 Vite 处理
+    "types": ["node"],           // ✅ 必须！启用 Node.js 内置类型（fs, path, __dirname 等）
+    "lib": ["ES2023"],           // Node.js 环境，不需要 DOM
+    "moduleDetection": "force"
+  },
+  "include": [
+    "vite.config.ts",           // ✅ Vite 配置文件
+    "postcss.config.js",        // ✅ 即使是 .js，TS 也能检查
+    "tailwind.config.ts",       // ✅ 如果你用了 Tailwind
+    "vitest.config.ts",         // ✅ 如果你用了 Vitest
+    "cypress.config.ts",        // ✅ 如果你用了 Cypress
+    "build/**/*.ts",            // ✅ 构建脚本
+    "scripts/**/*.ts"           // ✅ 自定义脚本（如 deploy.ts）
+  ]
+}

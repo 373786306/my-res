@@ -1,0 +1,20 @@
+
+
+/* 覆盖分割面板的分隔条颜色 */
+.splitpanes .splitpanes__splitter {
+  background-color: #ffffff !important;
+  
+}
+
+.default-theme.splitpanes .splitpanes__pane {
+    background-color: #ffffff !important;
+}
+
+.el-table th {
+  background-color: var(--el-table-header-bg-color, #f8f9fa) !important;
+  color: var(--el-table-header-text-color, #333) !important;
+  font-weight: 600;
+}
+.el-table th.is-leaf {
+  border-bottom: 1px solid var(--el-table-border-color, #ebeef5);
+}

@@ -1,0 +1,21 @@
+/* src/styles/element-variables.css */
+:root {
+  --el-table-header-bg-color: #e6f7ff;     /* 浅蓝色背景 */
+  --el-table-header-text-color: #1890ff;   /* 品牌蓝色文字 */
+  --el-table-border-color: #bae7ff;        /* 浅蓝色边框 */
+}
+
+
+/* 强制覆盖表头样式 */
+.el-table__header-wrapper th,
+.el-table__header th {
+  background-color: var(--el-table-header-bg-color) !important;
+  color: var(--el-table-header-text-color) !important;
+  font-weight: 600 !important;
+  border-bottom: 1px solid var(--el-table-border-color) !important;
+}
+
+/* 可选：表头第一行所有单元格 */
+.el-table__header-wrapper tr th {
+  background-color: var(--el-table-header-bg-color) !important;
+}
