@@ -33,6 +33,6 @@ export default defineConfig(({ mode }) => {
     //   }
     // }
   },
-  base: '/git@github.com:373786306/my-res.git/',
+  base: '/',
   }
 })
